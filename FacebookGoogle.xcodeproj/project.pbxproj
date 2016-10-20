@@ -12,6 +12,10 @@
 		1B06EFA21DB927750086B6EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B06EFA01DB927750086B6EE /* Main.storyboard */; };
 		1B06EFA41DB927750086B6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B06EFA31DB927750086B6EE /* Assets.xcassets */; };
 		1B06EFA71DB927750086B6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B06EFA51DB927750086B6EE /* LaunchScreen.storyboard */; };
+		1B06EFB01DB934920086B6EE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B06EFAF1DB934920086B6EE /* Bolts.framework */; };
+		1B06EFB21DB934AE0086B6EE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B06EFB11DB934AE0086B6EE /* FBSDKCoreKit.framework */; };
+		1B06EFB41DB934B80086B6EE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B06EFB31DB934B80086B6EE /* FBSDKLoginKit.framework */; };
+		1B06EFB61DB934CB0086B6EE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B06EFB51DB934CB0086B6EE /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		1B06EFA31DB927750086B6EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B06EFA61DB927750086B6EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B06EFA81DB927750086B6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B06EFAF1DB934920086B6EE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		1B06EFB11DB934AE0086B6EE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		1B06EFB31DB934B80086B6EE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		1B06EFB51DB934CB0086B6EE /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B06EFB61DB934CB0086B6EE /* FBSDKShareKit.framework in Frameworks */,
+				1B06EFB01DB934920086B6EE /* Bolts.framework in Frameworks */,
+				1B06EFB21DB934AE0086B6EE /* FBSDKCoreKit.framework in Frameworks */,
+				1B06EFB41DB934B80086B6EE /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +66,7 @@
 		1B06EF9B1DB927750086B6EE /* FacebookGoogle */ = {
 			isa = PBXGroup;
 			children = (
+				1B06EFAE1DB934390086B6EE /* Frameworks */,
 				1B06EF9C1DB927750086B6EE /* AppDelegate.swift */,
 				1B06EF9E1DB927750086B6EE /* ViewController.swift */,
 				1B06EFA01DB927750086B6EE /* Main.storyboard */,
@@ -62,6 +75,17 @@
 				1B06EFA81DB927750086B6EE /* Info.plist */,
 			);
 			path = FacebookGoogle;
+			sourceTree = "<group>";
+		};
+		1B06EFAE1DB934390086B6EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B06EFB51DB934CB0086B6EE /* FBSDKShareKit.framework */,
+				1B06EFB31DB934B80086B6EE /* FBSDKLoginKit.framework */,
+				1B06EFB11DB934AE0086B6EE /* FBSDKCoreKit.framework */,
+				1B06EFAF1DB934920086B6EE /* Bolts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +284,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookGoogle",
+				);
 				INFOPLIST_FILE = FacebookGoogle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = unicauca.FacebookGoogle;
@@ -272,6 +300,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookGoogle",
+				);
 				INFOPLIST_FILE = FacebookGoogle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = unicauca.FacebookGoogle;

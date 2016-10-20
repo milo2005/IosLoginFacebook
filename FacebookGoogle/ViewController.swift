@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
@@ -21,5 +24,25 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func onLoginFacebook(_ sender: AnyObject) {
+        let loginFB = FBSDKLoginManager()
+        loginFB.logIn(withReadPermissions: [], from: self) { (result:FBSDKLoginManagerLoginResult?, err:Error?) in
+            
+            if err != nil {
+                print("Process error")
+            } else if (result?.isCancelled)! {
+                print("Cancelled")
+            } else {
+                print("Logged in");
+            }
+            
+        }
+        
+        
+    }
+   
+    @IBAction func onLoginGoogle(_ sender: AnyObject) {
+        
+    }
 }
 
